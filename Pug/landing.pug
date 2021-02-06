@@ -1,0 +1,34 @@
+//- esto es con html
+//- <h1>Titulo</h1>
+//- <p>lorem input</p>
+
+//- esto es con Pug
+//- h1 Titulo
+//- p Lorem Insup
+//- div 
+//-   span Boton
+//- div
+//-   a Boton 2		
+
+extends componentes/plantilla.pug
+block contenidos
+		section.intro
+			.intro__imagen
+				img(src="images/imagen.png")
+			.intro__contenido
+				h2 #{titulo}
+				p 
+					| Lorem ipsum dolor sit amet consectetur
+					| adipisicing elit. Quae quidem ipsa quam 
+					| ab dolore distinctio, laudantium, aliquid
+					| inventore sequi debitis blanditiis rem recusandae
+					| enim quia accusamus natus hic id quaerat.
+					span Lorem ipsum dolor sit amet.
+				a.boton Leer Mas
+		//- ul
+		//- 	each titulo in titulos
+		//- 		li=titulo
+		main.contenido
+			+caja('imagen.png', titulos[1],'Lorem ipsum dolor sit amet.')
+			+caja('imagen.png', titulos[2],'Lorem ipsum dolor sit amet.')
+			+caja('imagen.png', titulos[3],'Lorem ipsum dolor sit amet.')
